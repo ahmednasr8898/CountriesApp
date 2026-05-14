@@ -70,8 +70,7 @@
 		79C6D1D92FB63D7300A7477B /* CountriesApp */ = {
 			isa = PBXGroup;
 			children = (
-				79C6D1E82FB63F3200A7477B /* NetworkServices */,
-				79C6D2032FB6572F00A7477B /* LocationServices */,
+				79C6D2092FB67FBF00A7477B /* Services */,
 				79C6D1ED2FB6408100A7477B /* DataLayer */,
 				79C6D1FD2FB64D1800A7477B /* Scenes */,
 				79C6D1DA2FB63D7300A7477B /* CountriesAppApp.swift */,
@@ -90,14 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		79C6D1E82FB63F3200A7477B /* NetworkServices */ = {
+		79C6D1E82FB63F3200A7477B /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				79C6D1E92FB63F4300A7477B /* APIRequest.swift */,
 				79C6D1EB2FB63F6300A7477B /* NetworkService.swift */,
 				79C6D1FB2FB64A3500A7477B /* APIEnvironment.swift */,
 			);
-			path = NetworkServices;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		79C6D1ED2FB6408100A7477B /* DataLayer */ = {
@@ -143,13 +142,22 @@
 			path = Countries;
 			sourceTree = "<group>";
 		};
-		79C6D2032FB6572F00A7477B /* LocationServices */ = {
+		79C6D2032FB6572F00A7477B /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				79C6D2042FB6575000A7477B /* LocationService.swift */,
 				79C6D2062FB6579500A7477B /* GeocodingService.swift */,
 			);
-			path = LocationServices;
+			path = Location;
+			sourceTree = "<group>";
+		};
+		79C6D2092FB67FBF00A7477B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D1E82FB63F3200A7477B /* Network */,
+				79C6D2032FB6572F00A7477B /* Location */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
