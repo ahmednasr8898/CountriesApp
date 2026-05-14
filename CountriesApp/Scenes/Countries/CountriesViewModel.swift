@@ -15,6 +15,9 @@ final class CountriesViewModel: ObservableObject {
     private var allCountries: [CountryModel] = []
     private let service: CountriesRepository
 
+    /// Location properties
+    private let locationService = LocationService()
+    private let geocodingService = GeocodingService()
     
     /// Published properties
     @Published private(set) var selectedCountries: [CountryModel] = []
@@ -29,8 +32,11 @@ final class CountriesViewModel: ObservableObject {
     init(service: CountriesRepository = CountriesRepositoryImpl(apiClient: APIClient())) {
         self.service = service
     }
-    
-    
+}
+
+
+/// Fetch Countries & Initial Location
+extension CountriesViewModel {
     func fetchCountries() async {
         isLoading = true
         errorMessage = nil
@@ -39,7 +45,7 @@ final class CountriesViewModel: ObservableObject {
             let countries = try await service.fetchCountries()
             self.allCountries = countries
 
-            setInitialCountry()
+            await setInitialCountryFromGPS()
 
         } catch {
             errorMessage = error.localizedDescription
@@ -49,12 +55,35 @@ final class CountriesViewModel: ObservableObject {
     }
     
     
-    private func setInitialCountry() {
-        guard let first = allCountries.first else { return }
-        selectedCountries = [first]
+    private func setInitialCountryFromGPS() async {
+        do {
+            let location = try await locationService.requestLocation()
+            let countryName = try await geocodingService.getCountry(from: location)
+
+            if let matchedCountry = allCountries.first(where: {
+                $0.name?.common?.lowercased() == countryName.lowercased()
+            }) {
+                selectedCountries = [matchedCountry]
+            }
+
+        } catch {
+            setEgyptAsDefaultCountry()
+        }
     }
+
     
-    
+    private func setEgyptAsDefaultCountry() {
+        guard let egypt = allCountries.first(where: {
+                $0.name?.common?.lowercased() == "egypt"
+            }) else { return }
+
+            selectedCountries = [egypt]
+    }
+}
+
+
+/// Search Countries
+extension CountriesViewModel {
     func searchCountries(query: String) {
 
         guard !query.isEmpty else {
@@ -68,8 +97,11 @@ final class CountriesViewModel: ObservableObject {
                 .contains(query.lowercased()) ?? false
         }
     }
-    
-    
+}
+
+
+/// Manage Selected Countries
+extension CountriesViewModel {
     func addCountry(_ country: CountryModel) {
 
         guard selectedCountries.count < 5 else {
