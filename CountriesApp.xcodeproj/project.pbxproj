@@ -33,6 +33,7 @@
 		79C6D23A2FB771D600A7477B /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2392FB771D600A7477B /* MockLocationService.swift */; };
 		79C6D23C2FB771F700A7477B /* MockGeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */; };
 		79C6D23E2FB7721B00A7477B /* MockStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23D2FB7721B00A7477B /* MockStorageService.swift */; };
+		79C6D2402FB7CA8D00A7477B /* CountryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		79C6D2392FB771D600A7477B /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
 		79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeocodingService.swift; sourceTree = "<group>"; };
 		79C6D23D2FB7721B00A7477B /* MockStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageService.swift; sourceTree = "<group>"; };
+		79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				79C6D21C2FB75FCC00A7477B /* CountryDetailsView.swift */,
+				79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */,
 			);
 			path = CountryDetailsView;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */,
 				79C6D1DB2FB63D7300A7477B /* CountriesAppApp.swift in Sources */,
 				79C6D2142FB75D3500A7477B /* CachedAsyncImage.swift in Sources */,
+				79C6D2402FB7CA8D00A7477B /* CountryDetailsViewModel.swift in Sources */,
 				79C6D1FC2FB64A3500A7477B /* APIEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,14 +10,14 @@ import SwiftUI
 
 struct CountryDetailsView: View {
 
-    let country: CountryModel
+    let viewModel: CountryDetailsViewModel
 
     var body: some View {
 
             VStack(spacing: 24) {
 
                 /// Country name header
-                Text(country.name?.common ?? "")
+                Text(viewModel.countryName)
                     .font(.system(size: 34, weight: .bold))
                     .multilineTextAlignment(.center)
 
@@ -37,33 +37,22 @@ struct CountryDetailsView: View {
 
 /// info section [capital, currency]
 extension CountryDetailsView {
-
+    
     private var detailsCard: some View {
-
+        
         VStack(spacing: 16) {
-
-            detailRow(title: "capital city", value: country.capital?.first ?? "N/A")
+            
+            detailRow(title: "capital city", value: viewModel.capitalCity)
             
             Divider()
             
-            detailRow(title: "Currency", value: currencyText)
+            detailRow(title: "Currency", value: viewModel.currencyText)
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color(.systemGray6))
         )
-    }
-    
-    /// currency [name, symbol]
-    private var currencyText: String {
-
-        guard let currencies = country.currencies,
-              let first = currencies.first else {
-            return "N/A"
-        }
-
-        return "\(first.value.name) (\(first.value.symbol))"
     }
 }
 

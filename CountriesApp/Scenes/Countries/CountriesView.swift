@@ -103,7 +103,7 @@ extension CountriesView {
         List {
             ForEach(viewModel.selectedCountries, id: \.name?.common) { country in
                 NavigationLink {
-                    CountryDetailsView(country: country)
+                    CountryDetailsView(viewModel: CountryDetailsViewModel(country: country))
                 } label: {
                     CountryRowView(
                         country: country,
