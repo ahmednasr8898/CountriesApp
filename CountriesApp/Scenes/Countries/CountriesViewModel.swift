@@ -27,7 +27,10 @@ final class CountriesViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
 
-
+    /// Storage properties
+    private let storage = LocalStorageService<[CountryModel]>(key: LocalStorageKeys.selectedCountries)
+    
+    
     /// Init
     init(service: CountriesRepository = CountriesRepositoryImpl(apiClient: APIClient())) {
         self.service = service
@@ -56,6 +59,11 @@ extension CountriesViewModel {
     
     
     private func setInitialCountryFromGPS() async {
+        if let cashedSelectedCountries = storage.load(), !cashedSelectedCountries.isEmpty {
+            selectedCountries = cashedSelectedCountries
+            return
+        }
+        
         do {
             let location = try await locationService.requestLocation()
             let countryName = try await geocodingService.getCountry(from: location)
@@ -64,6 +72,7 @@ extension CountriesViewModel {
                 $0.name?.common?.lowercased() == countryName.lowercased()
             }) {
                 selectedCountries = [matchedCountry]
+                storage.save([matchedCountry])
             }
 
         } catch {
@@ -78,6 +87,7 @@ extension CountriesViewModel {
             }) else { return }
 
             selectedCountries = [egypt]
+        storage.save([egypt])
     }
 }
 
@@ -117,6 +127,7 @@ extension CountriesViewModel {
         }
 
         selectedCountries.append(country)
+        storage.save(selectedCountries)
     }
     
     
@@ -124,5 +135,6 @@ extension CountriesViewModel {
         selectedCountries.removeAll {
             $0.name?.common == country.name?.common
         }
+        storage.save(selectedCountries)
     }
 }

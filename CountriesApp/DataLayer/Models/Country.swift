@@ -9,7 +9,7 @@ import Foundation
 
 
 /// CountryModel
-struct CountryModel: Decodable {
+struct CountryModel: Codable {
     let flags: FlagsModel?
     let name: CountryNameModel?
     let currencies: [String: CurrencyModel]?
@@ -18,7 +18,7 @@ struct CountryModel: Decodable {
 
 
 /// FlagsModel
-struct FlagsModel: Decodable {
+struct FlagsModel: Codable {
     let png: String?
     let svg: String?
     let alt: String?
@@ -26,14 +26,14 @@ struct FlagsModel: Decodable {
 
 
 /// CountryNameModel
-struct CountryNameModel: Decodable {
+struct CountryNameModel: Codable {
     let common: String?
     let official: String?
 }
 
 
 /// CurrencyModel
-struct CurrencyModel: Decodable {
+struct CurrencyModel: Codable {
     let name: String
     let symbol: String
 }
