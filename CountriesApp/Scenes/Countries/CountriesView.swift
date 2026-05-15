@@ -102,10 +102,15 @@ extension CountriesView {
     private var selectedCountriesView: some View {
         List {
             ForEach(viewModel.selectedCountries, id: \.name?.common) { country in
-
-                CountryRowView(country: country,
-                               isSelected: true) {
-                    viewModel.removeCountry(country)
+                NavigationLink {
+                    CountryDetailsView(country: country)
+                } label: {
+                    CountryRowView(
+                        country: country,
+                        isSelected: true
+                    ) {
+                        viewModel.removeCountry(country)
+                    }
                 }
             }
             .onDelete { indexSet in
