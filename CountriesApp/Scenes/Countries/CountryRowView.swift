@@ -19,18 +19,10 @@ struct CountryRowView: View {
         HStack(spacing: 16) {
 
             /// country flag
-            AsyncImage(url: URL(string: country.flags?.png ?? "")) { image in
-
-                image
-                    .resizable()
-                    .scaledToFill()
-
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 40, height: 25)
-            .clipShape(RoundedRectangle(cornerRadius: 4))
-
+            CachedAsyncImage(url: country.flags?.png ?? "")
+                .frame(width: 40, height: 25)
+                .clipShape(RoundedRectangle(cornerRadius: 4))
+            
             
             /// country name
             Text(country.name?.common ?? "")

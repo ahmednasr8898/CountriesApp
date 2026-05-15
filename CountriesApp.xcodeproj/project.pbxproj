@@ -23,6 +23,9 @@
 		79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20A2FB748F000A7477B /* CountryRowView.swift */; };
 		79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */; };
 		79C6D2122FB7515C00A7477B /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */; };
+		79C6D2142FB75D3500A7477B /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */; };
+		79C6D2172FB75DE100A7477B /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2162FB75DE100A7477B /* ImageCache.swift */; };
+		79C6D2192FB75DF800A7477B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2182FB75DF800A7477B /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		79C6D20A2FB748F000A7477B /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
 		79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
 		79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
+		79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
+		79C6D2162FB75DE100A7477B /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		79C6D2182FB75DF800A7477B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 		79C6D2002FB64D6500A7477B /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */,
 				79C6D20A2FB748F000A7477B /* CountryRowView.swift */,
 				79C6D1FE2FB64D2B00A7477B /* CountriesView.swift */,
 				79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */,
@@ -164,6 +171,7 @@
 				79C6D1E82FB63F3200A7477B /* Network */,
 				79C6D20C2FB750DA00A7477B /* Storage */,
 				79C6D2032FB6572F00A7477B /* Location */,
+				79C6D2152FB75DD200A7477B /* ImageCaching */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -175,6 +183,15 @@
 				79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		79C6D2152FB75DD200A7477B /* ImageCaching */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2162FB75DE100A7477B /* ImageCache.swift */,
+				79C6D2182FB75DF800A7477B /* ImageLoader.swift */,
+			);
+			path = ImageCaching;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +266,7 @@
 			files = (
 				79C6D1F42FB6425600A7477B /* CountriesAPIRequest.swift in Sources */,
 				79C6D1FF2FB64D2B00A7477B /* CountriesView.swift in Sources */,
+				79C6D2172FB75DE100A7477B /* ImageCache.swift in Sources */,
 				79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */,
 				79C6D2052FB6575000A7477B /* LocationService.swift in Sources */,
 				79C6D1F62FB6429E00A7477B /* CountriesRepository.swift in Sources */,
@@ -257,9 +275,11 @@
 				79C6D2072FB6579500A7477B /* GeocodingService.swift in Sources */,
 				79C6D1EA2FB63F4300A7477B /* APIRequest.swift in Sources */,
 				79C6D1EC2FB63F6300A7477B /* NetworkService.swift in Sources */,
+				79C6D2192FB75DF800A7477B /* ImageLoader.swift in Sources */,
 				79C6D1F12FB6411D00A7477B /* Country.swift in Sources */,
 				79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */,
 				79C6D1DB2FB63D7300A7477B /* CountriesAppApp.swift in Sources */,
+				79C6D2142FB75D3500A7477B /* CachedAsyncImage.swift in Sources */,
 				79C6D1FC2FB64A3500A7477B /* APIEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
