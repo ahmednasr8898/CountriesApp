@@ -148,8 +148,7 @@
 		79C6D2002FB64D6500A7477B /* Countries */ = {
 			isa = PBXGroup;
 			children = (
-				79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */,
-				79C6D20A2FB748F000A7477B /* CountryRowView.swift */,
+				79C6D21A2FB75EEE00A7477B /* SharedComponent */,
 				79C6D1FE2FB64D2B00A7477B /* CountriesView.swift */,
 				79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */,
 			);
@@ -192,6 +191,15 @@
 				79C6D2182FB75DF800A7477B /* ImageLoader.swift */,
 			);
 			path = ImageCaching;
+			sourceTree = "<group>";
+		};
+		79C6D21A2FB75EEE00A7477B /* SharedComponent */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */,
+				79C6D20A2FB748F000A7477B /* CountryRowView.swift */,
+			);
+			path = SharedComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
