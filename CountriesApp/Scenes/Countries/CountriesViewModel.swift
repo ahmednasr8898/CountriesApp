@@ -111,7 +111,10 @@ extension CountriesViewModel {
 
         guard !selectedCountries.contains(where: {
             $0.name?.common == country.name?.common
-        }) else { return }
+        }) else {
+            errorMessage = "\(country.name?.common ?? "Country") is already selected."
+            return
+        }
 
         selectedCountries.append(country)
     }
