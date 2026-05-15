@@ -34,6 +34,7 @@
 		79C6D23C2FB771F700A7477B /* MockGeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */; };
 		79C6D23E2FB7721B00A7477B /* MockStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23D2FB7721B00A7477B /* MockStorageService.swift */; };
 		79C6D2402FB7CA8D00A7477B /* CountryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */; };
+		79C6D2432FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2422FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeocodingService.swift; sourceTree = "<group>"; };
 		79C6D23D2FB7721B00A7477B /* MockStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageService.swift; sourceTree = "<group>"; };
 		79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewModel.swift; sourceTree = "<group>"; };
+		79C6D2422FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				79C6D22C2FB76C5900A7477B /* Countries */,
+				79C6D2412FB7CC6000A7477B /* CountryDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -291,6 +294,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79C6D2412FB7CC6000A7477B /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2422FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift */,
+			);
+			path = CountryDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +433,7 @@
 			files = (
 				79C6D23A2FB771D600A7477B /* MockLocationService.swift in Sources */,
 				79C6D2332FB7704F00A7477B /* MockCountriesRepository.swift in Sources */,
+				79C6D2432FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift in Sources */,
 				79C6D23C2FB771F700A7477B /* MockGeocodingService.swift in Sources */,
 				79C6D22E2FB76C6D00A7477B /* CountriesViewModelTests.swift in Sources */,
 				79C6D23E2FB7721B00A7477B /* MockStorageService.swift in Sources */,
