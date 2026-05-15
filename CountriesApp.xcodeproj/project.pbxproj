@@ -20,6 +20,7 @@
 		79C6D2022FB64FF400A7477B /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */; };
 		79C6D2052FB6575000A7477B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2042FB6575000A7477B /* LocationService.swift */; };
 		79C6D2072FB6579500A7477B /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2062FB6579500A7477B /* GeocodingService.swift */; };
+		79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20A2FB748F000A7477B /* CountryRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		79C6D2042FB6575000A7477B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		79C6D2062FB6579500A7477B /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		79C6D2082FB659CA00A7477B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		79C6D20A2FB748F000A7477B /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		79C6D2002FB64D6500A7477B /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				79C6D20A2FB748F000A7477B /* CountryRowView.swift */,
 				79C6D1FE2FB64D2B00A7477B /* CountriesView.swift */,
 				79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */,
 			);
@@ -232,6 +235,7 @@
 			files = (
 				79C6D1F42FB6425600A7477B /* CountriesAPIRequest.swift in Sources */,
 				79C6D1FF2FB64D2B00A7477B /* CountriesView.swift in Sources */,
+				79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */,
 				79C6D2052FB6575000A7477B /* LocationService.swift in Sources */,
 				79C6D1F62FB6429E00A7477B /* CountriesRepository.swift in Sources */,
 				79C6D2022FB64FF400A7477B /* CountriesViewModel.swift in Sources */,
