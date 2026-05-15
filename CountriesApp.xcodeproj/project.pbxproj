@@ -21,6 +21,8 @@
 		79C6D2052FB6575000A7477B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2042FB6575000A7477B /* LocationService.swift */; };
 		79C6D2072FB6579500A7477B /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2062FB6579500A7477B /* GeocodingService.swift */; };
 		79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20A2FB748F000A7477B /* CountryRowView.swift */; };
+		79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */; };
+		79C6D2122FB7515C00A7477B /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		79C6D2062FB6579500A7477B /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		79C6D2082FB659CA00A7477B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		79C6D20A2FB748F000A7477B /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
+		79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +162,19 @@
 			isa = PBXGroup;
 			children = (
 				79C6D1E82FB63F3200A7477B /* Network */,
+				79C6D20C2FB750DA00A7477B /* Storage */,
 				79C6D2032FB6572F00A7477B /* Location */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		79C6D20C2FB750DA00A7477B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */,
+				79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +252,13 @@
 				79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */,
 				79C6D2052FB6575000A7477B /* LocationService.swift in Sources */,
 				79C6D1F62FB6429E00A7477B /* CountriesRepository.swift in Sources */,
+				79C6D2122FB7515C00A7477B /* LocalStorageKeys.swift in Sources */,
 				79C6D2022FB64FF400A7477B /* CountriesViewModel.swift in Sources */,
 				79C6D2072FB6579500A7477B /* GeocodingService.swift in Sources */,
 				79C6D1EA2FB63F4300A7477B /* APIRequest.swift in Sources */,
 				79C6D1EC2FB63F6300A7477B /* NetworkService.swift in Sources */,
 				79C6D1F12FB6411D00A7477B /* Country.swift in Sources */,
+				79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */,
 				79C6D1DB2FB63D7300A7477B /* CountriesAppApp.swift in Sources */,
 				79C6D1FC2FB64A3500A7477B /* APIEnvironment.swift in Sources */,
 			);
