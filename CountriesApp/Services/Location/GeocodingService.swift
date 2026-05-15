@@ -9,9 +9,14 @@ import Foundation
 import CoreLocation
 
 
+protocol GeocodingServiceProtocol {
+    func getCountry(from location: CLLocation) async throws -> String
+}
+
+
 /// Service responsible for converting geographic coordinates
 /// into readable location information using reverse geocoding.
-final class GeocodingService {
+final class GeocodingService: GeocodingServiceProtocol {
 
     private let geocoder = CLGeocoder()
 

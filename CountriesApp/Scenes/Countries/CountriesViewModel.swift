@@ -16,8 +16,8 @@ final class CountriesViewModel: ObservableObject {
     private let service: CountriesRepository
 
     /// Location properties
-    private let locationService = LocationService()
-    private let geocodingService = GeocodingService()
+    private let locationService: LocationServiceProtocol
+    private let geocodingService: GeocodingServiceProtocol
     
     /// Published properties
     @Published private(set) var selectedCountries: [CountryModel] = []
@@ -28,12 +28,29 @@ final class CountriesViewModel: ObservableObject {
     @Published var errorMessage: String?
 
     /// Storage properties
-    private let storage = LocalStorageService<[CountryModel]>(key: LocalStorageKeys.selectedCountries)
+    private let storage: StorageServiceProtocol
     
     
     /// Init
-    init(service: CountriesRepository = CountriesRepositoryImpl(apiClient: APIClient())) {
+    init(
+        service: CountriesRepository,
+        locationService: LocationServiceProtocol,
+        geocodingService: GeocodingServiceProtocol,
+        storage: StorageServiceProtocol
+    ) {
         self.service = service
+        self.locationService = locationService
+        self.geocodingService = geocodingService
+        self.storage = storage
+    }
+    
+    convenience init() {
+        self.init(
+            service: CountriesRepositoryImpl(apiClient: APIClient()),
+            locationService: LocationService(),
+            geocodingService: GeocodingService(),
+            storage: CountryStorageService()
+        )
     }
 }
 

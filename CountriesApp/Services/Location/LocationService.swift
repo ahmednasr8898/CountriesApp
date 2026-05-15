@@ -9,9 +9,14 @@ import Foundation
 import CoreLocation
 
 
+protocol LocationServiceProtocol {
+    func requestLocation() async throws -> CLLocation
+}
+
+
 /// Service responsible for handling location permission
 /// and fetching the current user location using CoreLocation.
-final class LocationService: NSObject {
+final class LocationService: NSObject, LocationServiceProtocol {
 
     private let manager = CLLocationManager()
 
