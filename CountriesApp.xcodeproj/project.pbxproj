@@ -8,21 +8,88 @@
 
 /* Begin PBXBuildFile section */
 		79C6D1DB2FB63D7300A7477B /* CountriesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1DA2FB63D7300A7477B /* CountriesAppApp.swift */; };
-		79C6D1DD2FB63D7300A7477B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1DC2FB63D7300A7477B /* ContentView.swift */; };
 		79C6D1DF2FB63D7400A7477B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C6D1DE2FB63D7400A7477B /* Assets.xcassets */; };
 		79C6D1E22FB63D7400A7477B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C6D1E12FB63D7400A7477B /* Preview Assets.xcassets */; };
+		79C6D1EA2FB63F4300A7477B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1E92FB63F4300A7477B /* APIRequest.swift */; };
+		79C6D1EC2FB63F6300A7477B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1EB2FB63F6300A7477B /* NetworkService.swift */; };
+		79C6D1F12FB6411D00A7477B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1F02FB6411D00A7477B /* Country.swift */; };
+		79C6D1F42FB6425600A7477B /* CountriesAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1F32FB6425600A7477B /* CountriesAPIRequest.swift */; };
+		79C6D1F62FB6429E00A7477B /* CountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1F52FB6429E00A7477B /* CountriesRepository.swift */; };
+		79C6D1FC2FB64A3500A7477B /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1FB2FB64A3500A7477B /* APIEnvironment.swift */; };
+		79C6D1FF2FB64D2B00A7477B /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D1FE2FB64D2B00A7477B /* CountriesView.swift */; };
+		79C6D2022FB64FF400A7477B /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */; };
+		79C6D2052FB6575000A7477B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2042FB6575000A7477B /* LocationService.swift */; };
+		79C6D2072FB6579500A7477B /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2062FB6579500A7477B /* GeocodingService.swift */; };
+		79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20A2FB748F000A7477B /* CountryRowView.swift */; };
+		79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */; };
+		79C6D2122FB7515C00A7477B /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */; };
+		79C6D2142FB75D3500A7477B /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */; };
+		79C6D2172FB75DE100A7477B /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2162FB75DE100A7477B /* ImageCache.swift */; };
+		79C6D2192FB75DF800A7477B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2182FB75DF800A7477B /* ImageLoader.swift */; };
+		79C6D21D2FB75FCC00A7477B /* CountryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D21C2FB75FCC00A7477B /* CountryDetailsView.swift */; };
+		79C6D22E2FB76C6D00A7477B /* CountriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D22D2FB76C6D00A7477B /* CountriesViewModelTests.swift */; };
+		79C6D2302FB76EE000A7477B /* CountryStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D22F2FB76EE000A7477B /* CountryStorageService.swift */; };
+		79C6D2332FB7704F00A7477B /* MockCountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2322FB7704F00A7477B /* MockCountriesRepository.swift */; };
+		79C6D23A2FB771D600A7477B /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2392FB771D600A7477B /* MockLocationService.swift */; };
+		79C6D23C2FB771F700A7477B /* MockGeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */; };
+		79C6D23E2FB7721B00A7477B /* MockStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23D2FB7721B00A7477B /* MockStorageService.swift */; };
+		79C6D2402FB7CA8D00A7477B /* CountryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */; };
+		79C6D2432FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6D2422FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79C6D2262FB76C3700A7477B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79C6D1CF2FB63D7300A7477B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C6D1D62FB63D7300A7477B;
+			remoteInfo = CountriesApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		79C6D1D72FB63D7300A7477B /* CountriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C6D1DA2FB63D7300A7477B /* CountriesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAppApp.swift; sourceTree = "<group>"; };
-		79C6D1DC2FB63D7300A7477B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79C6D1DE2FB63D7400A7477B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79C6D1E12FB63D7400A7477B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79C6D1E92FB63F4300A7477B /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		79C6D1EB2FB63F6300A7477B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		79C6D1F02FB6411D00A7477B /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		79C6D1F32FB6425600A7477B /* CountriesAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPIRequest.swift; sourceTree = "<group>"; };
+		79C6D1F52FB6429E00A7477B /* CountriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRepository.swift; sourceTree = "<group>"; };
+		79C6D1FB2FB64A3500A7477B /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		79C6D1FE2FB64D2B00A7477B /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
+		79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		79C6D2042FB6575000A7477B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		79C6D2062FB6579500A7477B /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
+		79C6D2082FB659CA00A7477B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		79C6D20A2FB748F000A7477B /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
+		79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
+		79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
+		79C6D2162FB75DE100A7477B /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		79C6D2182FB75DF800A7477B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		79C6D21C2FB75FCC00A7477B /* CountryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsView.swift; sourceTree = "<group>"; };
+		79C6D2222FB76C3700A7477B /* CountriesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79C6D22D2FB76C6D00A7477B /* CountriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModelTests.swift; sourceTree = "<group>"; };
+		79C6D22F2FB76EE000A7477B /* CountryStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStorageService.swift; sourceTree = "<group>"; };
+		79C6D2322FB7704F00A7477B /* MockCountriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesRepository.swift; sourceTree = "<group>"; };
+		79C6D2392FB771D600A7477B /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
+		79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGeocodingService.swift; sourceTree = "<group>"; };
+		79C6D23D2FB7721B00A7477B /* MockStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageService.swift; sourceTree = "<group>"; };
+		79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewModel.swift; sourceTree = "<group>"; };
+		79C6D2422FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		79C6D1D42FB63D7300A7477B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79C6D21F2FB76C3700A7477B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,7 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				79C6D1D92FB63D7300A7477B /* CountriesApp */,
+				79C6D2232FB76C3700A7477B /* CountriesAppTests */,
 				79C6D1D82FB63D7300A7477B /* Products */,
+				79C6D2342FB7709B00A7477B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				79C6D1D72FB63D7300A7477B /* CountriesApp.app */,
+				79C6D2222FB76C3700A7477B /* CountriesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +121,12 @@
 		79C6D1D92FB63D7300A7477B /* CountriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				79C6D2092FB67FBF00A7477B /* Services */,
+				79C6D1ED2FB6408100A7477B /* DataLayer */,
+				79C6D1FD2FB64D1800A7477B /* Scenes */,
 				79C6D1DA2FB63D7300A7477B /* CountriesAppApp.swift */,
-				79C6D1DC2FB63D7300A7477B /* ContentView.swift */,
 				79C6D1DE2FB63D7400A7477B /* Assets.xcassets */,
+				79C6D2082FB659CA00A7477B /* Info.plist */,
 				79C6D1E02FB63D7400A7477B /* Preview Content */,
 			);
 			path = CountriesApp;
@@ -65,6 +138,170 @@
 				79C6D1E12FB63D7400A7477B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		79C6D1E82FB63F3200A7477B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D1E92FB63F4300A7477B /* APIRequest.swift */,
+				79C6D1EB2FB63F6300A7477B /* NetworkService.swift */,
+				79C6D1FB2FB64A3500A7477B /* APIEnvironment.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		79C6D1ED2FB6408100A7477B /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D1EE2FB640D300A7477B /* Models */,
+				79C6D1F22FB6421000A7477B /* CountriesRequests */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		79C6D1EE2FB640D300A7477B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D1F02FB6411D00A7477B /* Country.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79C6D1F22FB6421000A7477B /* CountriesRequests */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D1F32FB6425600A7477B /* CountriesAPIRequest.swift */,
+				79C6D1F52FB6429E00A7477B /* CountriesRepository.swift */,
+			);
+			path = CountriesRequests;
+			sourceTree = "<group>";
+		};
+		79C6D1FD2FB64D1800A7477B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2002FB64D6500A7477B /* Countries */,
+				79C6D21B2FB75FBD00A7477B /* CountryDetails */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		79C6D2002FB64D6500A7477B /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D21A2FB75EEE00A7477B /* SharedComponent */,
+				79C6D1FE2FB64D2B00A7477B /* CountriesView.swift */,
+				79C6D2012FB64FF400A7477B /* CountriesViewModel.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		79C6D2032FB6572F00A7477B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2042FB6575000A7477B /* LocationService.swift */,
+				79C6D2062FB6579500A7477B /* GeocodingService.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		79C6D2092FB67FBF00A7477B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D1E82FB63F3200A7477B /* Network */,
+				79C6D20C2FB750DA00A7477B /* Storage */,
+				79C6D2032FB6572F00A7477B /* Location */,
+				79C6D2152FB75DD200A7477B /* ImageCaching */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		79C6D20C2FB750DA00A7477B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2112FB7515C00A7477B /* LocalStorageKeys.swift */,
+				79C6D20F2FB7513C00A7477B /* LocalStorageService.swift */,
+				79C6D22F2FB76EE000A7477B /* CountryStorageService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		79C6D2152FB75DD200A7477B /* ImageCaching */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2162FB75DE100A7477B /* ImageCache.swift */,
+				79C6D2182FB75DF800A7477B /* ImageLoader.swift */,
+			);
+			path = ImageCaching;
+			sourceTree = "<group>";
+		};
+		79C6D21A2FB75EEE00A7477B /* SharedComponent */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2132FB75D3500A7477B /* CachedAsyncImage.swift */,
+				79C6D20A2FB748F000A7477B /* CountryRowView.swift */,
+			);
+			path = SharedComponent;
+			sourceTree = "<group>";
+		};
+		79C6D21B2FB75FBD00A7477B /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D21C2FB75FCC00A7477B /* CountryDetailsView.swift */,
+				79C6D23F2FB7CA8D00A7477B /* CountryDetailsViewModel.swift */,
+			);
+			path = CountryDetails;
+			sourceTree = "<group>";
+		};
+		79C6D2232FB76C3700A7477B /* CountriesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D22B2FB76C4D00A7477B /* Scenes */,
+			);
+			path = CountriesAppTests;
+			sourceTree = "<group>";
+		};
+		79C6D22B2FB76C4D00A7477B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D22C2FB76C5900A7477B /* Countries */,
+				79C6D2412FB7CC6000A7477B /* CountryDetails */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		79C6D22C2FB76C5900A7477B /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2312FB7704100A7477B /* Mocks */,
+				79C6D22D2FB76C6D00A7477B /* CountriesViewModelTests.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		79C6D2312FB7704100A7477B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2322FB7704F00A7477B /* MockCountriesRepository.swift */,
+				79C6D2392FB771D600A7477B /* MockLocationService.swift */,
+				79C6D23B2FB771F700A7477B /* MockGeocodingService.swift */,
+				79C6D23D2FB7721B00A7477B /* MockStorageService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		79C6D2342FB7709B00A7477B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79C6D2412FB7CC6000A7477B /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				79C6D2422FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift */,
+			);
+			path = CountryDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +324,24 @@
 			productReference = 79C6D1D72FB63D7300A7477B /* CountriesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79C6D2212FB76C3700A7477B /* CountriesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79C6D2282FB76C3700A7477B /* Build configuration list for PBXNativeTarget "CountriesAppTests" */;
+			buildPhases = (
+				79C6D21E2FB76C3700A7477B /* Sources */,
+				79C6D21F2FB76C3700A7477B /* Frameworks */,
+				79C6D2202FB76C3700A7477B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79C6D2272FB76C3700A7477B /* PBXTargetDependency */,
+			);
+			name = CountriesAppTests;
+			productName = CountriesAppTests;
+			productReference = 79C6D2222FB76C3700A7477B /* CountriesAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +354,10 @@
 				TargetAttributes = {
 					79C6D1D62FB63D7300A7477B = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					79C6D2212FB76C3700A7477B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 79C6D1D62FB63D7300A7477B;
 					};
 				};
 			};
@@ -116,6 +375,7 @@
 			projectRoot = "";
 			targets = (
 				79C6D1D62FB63D7300A7477B /* CountriesApp */,
+				79C6D2212FB76C3700A7477B /* CountriesAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +390,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79C6D2202FB76C3700A7477B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +404,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79C6D1DD2FB63D7300A7477B /* ContentView.swift in Sources */,
+				79C6D21D2FB75FCC00A7477B /* CountryDetailsView.swift in Sources */,
+				79C6D1F42FB6425600A7477B /* CountriesAPIRequest.swift in Sources */,
+				79C6D1FF2FB64D2B00A7477B /* CountriesView.swift in Sources */,
+				79C6D2172FB75DE100A7477B /* ImageCache.swift in Sources */,
+				79C6D20B2FB748F000A7477B /* CountryRowView.swift in Sources */,
+				79C6D2052FB6575000A7477B /* LocationService.swift in Sources */,
+				79C6D1F62FB6429E00A7477B /* CountriesRepository.swift in Sources */,
+				79C6D2122FB7515C00A7477B /* LocalStorageKeys.swift in Sources */,
+				79C6D2022FB64FF400A7477B /* CountriesViewModel.swift in Sources */,
+				79C6D2072FB6579500A7477B /* GeocodingService.swift in Sources */,
+				79C6D1EA2FB63F4300A7477B /* APIRequest.swift in Sources */,
+				79C6D1EC2FB63F6300A7477B /* NetworkService.swift in Sources */,
+				79C6D2192FB75DF800A7477B /* ImageLoader.swift in Sources */,
+				79C6D1F12FB6411D00A7477B /* Country.swift in Sources */,
+				79C6D2302FB76EE000A7477B /* CountryStorageService.swift in Sources */,
+				79C6D2102FB7513C00A7477B /* LocalStorageService.swift in Sources */,
 				79C6D1DB2FB63D7300A7477B /* CountriesAppApp.swift in Sources */,
+				79C6D2142FB75D3500A7477B /* CachedAsyncImage.swift in Sources */,
+				79C6D2402FB7CA8D00A7477B /* CountryDetailsViewModel.swift in Sources */,
+				79C6D1FC2FB64A3500A7477B /* APIEnvironment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79C6D21E2FB76C3700A7477B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79C6D23A2FB771D600A7477B /* MockLocationService.swift in Sources */,
+				79C6D2332FB7704F00A7477B /* MockCountriesRepository.swift in Sources */,
+				79C6D2432FB7CC6F00A7477B /* CountryDetailsViewModelTests.swift in Sources */,
+				79C6D23C2FB771F700A7477B /* MockGeocodingService.swift in Sources */,
+				79C6D22E2FB76C6D00A7477B /* CountriesViewModelTests.swift in Sources */,
+				79C6D23E2FB7721B00A7477B /* MockStorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79C6D2272FB76C3700A7477B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79C6D1D62FB63D7300A7477B /* CountriesApp */;
+			targetProxy = 79C6D2262FB76C3700A7477B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		79C6D1E32FB63D7400A7477B /* Debug */ = {
@@ -275,6 +581,7 @@
 				DEVELOPMENT_TEAM = WUXSC8N9K8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CountriesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +611,7 @@
 				DEVELOPMENT_TEAM = WUXSC8N9K8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CountriesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +627,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79C6D2292FB76C3700A7477B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WUXSC8N9K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmednasr.CountriesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountriesApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CountriesApp";
+			};
+			name = Debug;
+		};
+		79C6D22A2FB76C3700A7477B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WUXSC8N9K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmednasr.CountriesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountriesApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CountriesApp";
 			};
 			name = Release;
 		};
@@ -339,6 +683,15 @@
 			buildConfigurations = (
 				79C6D1E62FB63D7400A7477B /* Debug */,
 				79C6D1E72FB63D7400A7477B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79C6D2282FB76C3700A7477B /* Build configuration list for PBXNativeTarget "CountriesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79C6D2292FB76C3700A7477B /* Debug */,
+				79C6D22A2FB76C3700A7477B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
